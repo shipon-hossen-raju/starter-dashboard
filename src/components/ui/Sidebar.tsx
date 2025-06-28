@@ -1,39 +1,49 @@
+import {
+  chatSupportIcon,
+  dashboardIcon,
+  logoutIcon,
+  profileTeamIcon,
+  propertyOwnerIcon,
+  serviceProviderIcon,
+  tenantIcon,
+} from "@/asserts/icons";
+import logo from "@/asserts/icons/logo";
+import { LogOut, User } from "lucide-react";
 import React from "react";
 import { useDispatch } from "react-redux";
-import {
-  Home,
-  Building,
-  Users,
-  Settings,
-  MessageSquare,
-  User,
-  LogOut,
-} from "lucide-react";
 import { logout } from "../../redux/authSlice";
 
-const menuItems = [
-  { icon: Home, label: "Dashboard", active: true },
-  { icon: Building, label: "Property Owner" },
-  { icon: Users, label: "Tenant" },
-  { icon: Settings, label: "Service Provider" },
-  { icon: MessageSquare, label: "Chat & Support" },
-  { icon: User, label: "Profile & Team" },
+const menuData = [
+  { id: 1, icon: dashboardIcon, label: "Dashboard", active: true },
+  { id: 2, icon: propertyOwnerIcon, label: "Property Owner" },
+  { id: 3, icon: tenantIcon, label: "Tenant" },
+  { id: 4, icon: serviceProviderIcon, label: "Service Provider" },
+  { id: 5, icon: chatSupportIcon, label: "Chat & Support" },
+  { id: 6, icon: profileTeamIcon, label: "Profile & Team" },
 ];
 
 export const Sidebar: React.FC = () => {
+  const [menuItems, setMenuItems] = React.useState(menuData);
   const dispatch = useDispatch();
+
+  const handleChangeNav = (id: number) => {
+    const newMenuItems = menuItems.map((item) => ({
+      ...item,
+      active: item.id === id
+    }))
+
+    setMenuItems(newMenuItems);
+  }
 
   const handleLogout = () => {
     dispatch(logout());
   };
 
   return (
-    <div className="w-64 bg-white border-r border-gray-200 h-full flex flex-col">
-      <div className="p-6">
-        <div className="flex items-center space-x-2 mb-8">
-          <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-            <Building className="w-5 h-5 text-white" />
-          </div>
+    <div className="w-64 min-h-screen bg-white border-r border-gray-200 h-full flex flex-col p-6">
+      <div className="">
+        <div className="flex flex-col items-center space-x-2 mb-8 pt-4">
+          <figure className="text-primary">{logo}</figure>
           <span className="text-lg font-semibold text-gray-900">
             Home Management
           </span>
@@ -43,25 +53,27 @@ export const Sidebar: React.FC = () => {
           {menuItems.map((item, index) => (
             <button
               key={index}
-              className={`w-full flex items-center space-x-3 px-3 py-2 rounded-lg text-left transition-colors ${
+              onClick={() => handleChangeNav(item.id)}
+              className={`w-full flex items-center space-x-3 px-4 py-4 rounded-lg text-left transition-colors ${
                 item.active
-                  ? "bg-blue-600 text-white"
+                  ? "bg-primary text-white"
                   : "text-gray-700 hover:bg-gray-100"
               }`}
             >
-              <item.icon className="w-5 h-5" />
+              <figure className="w-5 h-5">{item.icon}</figure>
               <span className="text-sm font-medium">{item.label}</span>
             </button>
           ))}
         </nav>
       </div>
 
-      <div className="mt-auto p-6">
+      {/* <div className="mt-auto p-6"> */}
+      <div className="">
         <button
           onClick={handleLogout}
-          className="w-full flex items-center space-x-3 px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+          className="w-full flex items-center space-x-3 px-4 py-4 rounded-lg text-left transition-colors text-gray-700 hover:bg-gray-100"
         >
-          <LogOut className="w-5 h-5" />
+          {logoutIcon}
           <span className="text-sm font-medium">Log Out</span>
         </button>
       </div>

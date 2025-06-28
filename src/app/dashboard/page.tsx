@@ -24,10 +24,15 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex">
+    <div className="min-h-screen flex">
+      {/* Sidebar */}
       <Sidebar />
+
+      {/* Right Content */}
       <div className="flex-1 flex flex-col">
         <DashboardHeader />
+
+        {/* Main Content */}
         <div className="flex-1 overflow-auto">
           <StatsCards />
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 px-6 pb-6">
