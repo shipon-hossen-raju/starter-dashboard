@@ -1,13 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
-import authReducer from "./authSlice";
-import propertyReducer from "./propertySlice";
-import propertyOwner from "./propertyOwnerSlice";
+import propertyReducer from "./slice/propertySlice";
+import authReducer from "./slice/authSlice";
+import propertyOwner from "./slice/propertyOwnerSlice";
+import tenant from "./slice/tenantSlice";
 
 export const store = configureStore({
   reducer: {
     auth: authReducer,
     property: propertyReducer,
     propertyOwner: propertyOwner,
+    tenant: tenant,
   },
 });
 

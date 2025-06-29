@@ -1,5 +1,9 @@
-import React from 'react'
+import ServiceProvider from "@/components/pages/ServiceProvider/ServiceProvider";
 
-export default function ServiceProvider() {
-  return <div>service provider</div>;
+export default function ServiceProviderPage() {
+  return (
+    <>
+      <ServiceProvider />
+    </>
+  );
 }

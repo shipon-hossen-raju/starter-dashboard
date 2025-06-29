@@ -14,7 +14,7 @@ module.exports = {
         bgButton: "#101618",
         textPrimary: "#1E1E1E",
         textSecondary: "#101618",
-        iconColor: "#141B34",
+        iconColor: "#101618",
         iconHoverColor: "#036AA2",
         tableBorder: "#1016181F",
         secondary: {

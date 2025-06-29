@@ -1,5 +1,9 @@
-import React from 'react'
+import Tenant from "@/components/pages/Tenant/Tenant";
 
-export default function Tenant() {
-  return <div>tenant</div>;
+export default function TenantPage() {
+  return (
+    <>
+      <Tenant />
+    </>
+  );
 }

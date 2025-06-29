@@ -8,23 +8,26 @@ import { Metadata } from "next";
 import React from "react";
 import { useSelector } from "react-redux";
 import InputSearch from "../../ui/InputSearch";
+import SwitchToggle from "@/components/ui/SwitchToggle";
 
 export const metaData: Metadata = {
   title: "Property Owner",
   description: "ALl Property Owner List",
 };
 
-const PropertyOwner: React.FC = () => {
-  const { propertiesOwner } = useSelector(
-    (state: RootState) => state.propertyOwner
-  );
+const ServiceProvider: React.FC = () => {
+  const { tenants } = useSelector((state: RootState) => state.tenant);
 
   return (
     <div>
       <Card>
         <div>
           <div className="flex items-center justify-between mb-8">
-            <h2>Property Owner List</h2>
+            <div className="flex items-center space-x-6">
+              <h2>Service Provider List</h2>
+              <SwitchToggle />
+            </div>
+
             {/* search */}
             <div>
               <InputSearch />
@@ -35,26 +38,26 @@ const PropertyOwner: React.FC = () => {
             <table className="w-full">
               <thead>
                 <tr>
-                  <th>Owner Name</th>
+                  <th>Tenant Name</th>
                   <th>Address</th>
-                  <th className={`text-center`}>Email Address</th>
-                  <th className={`text-center`}>Mobile Number</th>
-                  <th className={`text-center`}>Total Buildings</th>
-                  <th className={`text-center`}>Total Unit</th>
-                  <th className={`text-center`}>Action</th>
+                  <th className="text-center">Email Address</th>
+                  <th className="text-center">Mobile Number</th>
+                  <th className="text-center">House Owner</th>
+                  <th className="text-center">Rent Date</th>
+                  <th className="text-center">Action</th>
                 </tr>
               </thead>
               <tbody>
-                {propertiesOwner.map((property) => (
-                  <tr key={property.id}>
-                    <td>{property.ownerName}</td>
-                    <td>{property.address}</td>
-                    <td className="text-center">{property.email}</td>
-                    <td className="text-center">{property.mobileNumber}</td>
+                {tenants.map((tenant) => (
+                  <tr key={tenant.id}>
+                    <td>{tenant.tenantName}</td>
+                    <td>{tenant.address}</td>
+                    <td className="text-center">{tenant.email}</td>
+                    <td className="text-center">{tenant.mobileNumber}</td>
                     <td className="text-center">
-                      {property.totalBuildings.toString().padStart(2, "0")}
+                      {tenant.houseOwner.toString().padStart(2, "0")}
                     </td>
-                    <td className="text-center">{property.totalUnits}</td>
+                    <td className="text-center">{tenant.rentDate}</td>
                     <td className="text-center flex-center">
                       <button className="edit-button">{pencilIcon}</button>
                     </td>
@@ -72,4 +75,4 @@ const PropertyOwner: React.FC = () => {
   );
 };
 
-export default PropertyOwner;
+export default ServiceProvider;

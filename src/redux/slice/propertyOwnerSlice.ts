@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { PropertyOwnerState } from "../types";
+import { PropertyOwnerState } from "../../types";
 
 const initialState: PropertyOwnerState = {
   propertiesOwner: [

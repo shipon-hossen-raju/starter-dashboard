@@ -16,6 +16,10 @@ h2 {
   @apply flex items-center justify-center;
 }
 
+.edit-button {
+  @apply text-iconColor bg-bgGray size-7 rounded-full flex-center hover:bg-primary hover:text-white transition-all duration-300;
+}
+
 /* table default style */
 table {
   @apply w-full;

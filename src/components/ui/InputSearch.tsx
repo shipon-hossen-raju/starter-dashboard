@@ -1,6 +1,6 @@
 import { magnifyingGlassIcon } from "@/asserts/icons";
 
-export default function OwnerSearch() {
+export default function InputSearch() {
   return (
     <div className="flex items-center space-x-1 bg-bgBody rounded-3xl py-2.5 px-3.5 w-80">
       <span className="text-iconColor">{magnifyingGlassIcon}</span>

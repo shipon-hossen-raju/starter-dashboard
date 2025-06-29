@@ -2,9 +2,9 @@
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { loginStart, loginSuccess } from "../../redux/slice/authSlice";
 import { Button } from "../ui/Button";
 import { Input } from "../ui/Input";
-import { loginStart, loginSuccess } from "../../redux/authSlice";
 
 export const LoginForm: React.FC = () => {
   const [email, setEmail] = useState("test@g.com");

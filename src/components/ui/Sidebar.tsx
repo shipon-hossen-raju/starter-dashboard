@@ -11,7 +11,8 @@ import logo from "@/asserts/icons/logo";
 import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { logout } from "../../redux/authSlice";
+import { logout } from "../../redux/slice/authSlice";
+import Link from "next/link";
 
 const menuData = [
   {
@@ -73,7 +74,7 @@ export const Sidebar: React.FC = () => {
     if (activeItem) {
       handleChangeNav(activeItem.id);
     }
-  }, [])
+  }, []);
 
   const handleLogout = () => {
     dispatch(logout());
@@ -91,18 +92,19 @@ export const Sidebar: React.FC = () => {
 
         <nav className="space-y-2">
           {menuItems.map((item, index) => (
-            <button
-              key={index}
-              onClick={() => handleChangeNav(item.id)}
-              className={`w-full flex items-center space-x-3 px-4 py-4 rounded-lg text-left transition-colors ${
-                item.active
-                  ? "bg-primary text-white"
-                  : "text-gray-700 hover:bg-gray-100"
-              }`}
-            >
-              <figure className="w-5 h-5">{item.icon}</figure>
-              <span className="text-sm font-medium">{item.label}</span>
-            </button>
+            <Link href={item.link} key={index}>
+              <button
+                onClick={() => handleChangeNav(item.id)}
+                className={`w-full flex items-center space-x-3 px-4 py-4 rounded-lg text-left transition-colors ${
+                  item.active
+                    ? "bg-primary text-white"
+                    : "text-gray-700 hover:bg-gray-100"
+                }`}
+              >
+                <figure className="w-5 h-5">{item.icon}</figure>
+                <span className="text-sm font-medium">{item.label}</span>
+              </button>
+            </Link>
           ))}
         </nav>
       </div>

@@ -1,5 +1,5 @@
+import { PropertyState } from "@/types";
 import { createSlice } from "@reduxjs/toolkit";
-import { PropertyState } from "../types";
 
 const initialState: PropertyState = {
   properties: [

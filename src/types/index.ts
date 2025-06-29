@@ -43,3 +43,21 @@ export interface PropertyOwnerState {
   totalServices: number;
   totalUsers: number;
 }
+
+export interface Tenant {
+  id: string;
+  tenantName: string;
+  address: string;
+  email: string;
+  mobileNumber: string;
+  houseOwner: string;
+  rentDate: string;
+}
+
+export interface TenantState {
+  tenants: Tenant[];
+  totalBuildings: number;
+  totalUnits: number;
+  totalServices: number;
+  totalUsers: number;
+}
