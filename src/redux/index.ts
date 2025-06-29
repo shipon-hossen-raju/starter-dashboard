@@ -1,8 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import propertyReducer from "./slice/propertySlice";
 import authReducer from "./slice/authSlice";
 import propertyOwner from "./slice/propertyOwnerSlice";
+import propertyReducer from "./slice/propertySlice";
+import serviceProvider from "./slice/serviceProvider";
 import tenant from "./slice/tenantSlice";
+import chat from "./slice/chatSlice";
 
 export const store = configureStore({
   reducer: {
@@ -10,6 +12,8 @@ export const store = configureStore({
     property: propertyReducer,
     propertyOwner: propertyOwner,
     tenant: tenant,
+    serviceProvider: serviceProvider,
+    chat: chat,
   },
 });
 

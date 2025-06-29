@@ -1,26 +1,35 @@
 import { useState } from "react";
 
-export default function SwitchToggle() {
-  const [active, setActive] = useState("active");
+export default function SwitchToggle({ active, setActive }: { active: string; setActive: any }) {
+
 
   const buttonStyle =
-    "text-textSecondary py-2 px-5 rounded-3xl bg-white font-medium text-base transition-all duration-300";
+      "text-textSecondary py-2 px-5 rounded-3xl bg-white font-medium text-base transition-all duration-300";
+   
   return (
     <div>
       <div className="flex items-center space-x-3 border rounded-3xl p-1.5 bg-bgBody">
         <button
           className={`${buttonStyle}  ${
-            active === "active" && "!bg-primary !text-white"
+            active === "ALL" && "!bg-primary !text-white"
           }`}
-          onClick={() => setActive("active")}
+          onClick={() => setActive("ALL")}
+        >
+          All
+        </button>
+        <button
+          className={`${buttonStyle}  ${
+            active === "ACTIVE" && "!bg-primary !text-white"
+          }`}
+          onClick={() => setActive("ACTIVE")}
         >
           Active
         </button>
         <button
           className={`${buttonStyle} ${
-            active === "pending" && "!bg-primary !text-white"
+            active === "PENDING" && "!bg-primary !text-white"
           }`}
-          onClick={() => setActive("pending")}
+          onClick={() => setActive("PENDING")}
         >
           Pending
         </button>

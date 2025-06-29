@@ -1,7 +1,6 @@
+import ChatSupport from '@/components/pages/ChatSupport/ChatSupport';
 import React from 'react'
 
-export default function ChatSupport() {
-  return <div>
-    chat support
-  </div>;
+export default function ChatSupportPage() {
+  return <><ChatSupport /></>;
 }

@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/Card";
 import Pagination from "@/components/ui/Pagination";
 import { RootState } from "@/redux";
 import { Metadata } from "next";
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import InputSearch from "../../ui/InputSearch";
 import SwitchToggle from "@/components/ui/SwitchToggle";
@@ -16,7 +16,12 @@ export const metaData: Metadata = {
 };
 
 const ServiceProvider: React.FC = () => {
-  const { tenants } = useSelector((state: RootState) => state.tenant);
+  const { serviceProviders } = useSelector((state: RootState) => state.serviceProvider);
+  const [active, setActive] = useState("ACTIVE");
+
+  const filteredServiceProvider = serviceProviders.filter(
+    (sp) => active === "ALL" || sp.status === active
+  );
 
   return (
     <div>
@@ -25,7 +30,7 @@ const ServiceProvider: React.FC = () => {
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center space-x-6">
               <h2>Service Provider List</h2>
-              <SwitchToggle />
+              <SwitchToggle active={active} setActive={setActive} />
             </div>
 
             {/* search */}
@@ -48,16 +53,16 @@ const ServiceProvider: React.FC = () => {
                 </tr>
               </thead>
               <tbody>
-                {tenants.map((tenant) => (
-                  <tr key={tenant.id}>
-                    <td>{tenant.tenantName}</td>
-                    <td>{tenant.address}</td>
-                    <td className="text-center">{tenant.email}</td>
-                    <td className="text-center">{tenant.mobileNumber}</td>
+                {filteredServiceProvider.map((service) => (
+                  <tr key={service.id}>
+                    <td>{service.tenantName}</td>
+                    <td>{service.address}</td>
+                    <td className="text-center">{service.email}</td>
+                    <td className="text-center">{service.mobileNumber}</td>
                     <td className="text-center">
-                      {tenant.houseOwner.toString().padStart(2, "0")}
+                      {service.serviceType}
                     </td>
-                    <td className="text-center">{tenant.rentDate}</td>
+                    <td className="text-center">{service.joinDate}</td>
                     <td className="text-center flex-center">
                       <button className="edit-button">{pencilIcon}</button>
                     </td>

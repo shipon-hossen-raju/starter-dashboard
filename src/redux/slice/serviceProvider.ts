@@ -1,79 +1,87 @@
-import { TenantState } from "@/types";
+import { ServiceProviderState } from "@/types";
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState: TenantState = {
-  tenants: [
+const initialState: ServiceProviderState = {
+  serviceProviders: [
     {
       id: "1",
       tenantName: "Kayde",
       address: "Rue Oliveira, Marrakech",
-      houseOwner: "Pranakrishna",
       email: "test@g.com",
       mobileNumber: "123456789",
-      rentDate: "2023-01-01",
+      serviceType: "ELECTRICITY",
+      joinDate: "2023-01-01",
+      status: "ACTIVE",
     },
     {
       id: "2",
       tenantName: "Sandor",
       address: "Avenue Liberté, Casablanca",
-      houseOwner: "Pranakrishna",
       email: "test1@g.com",
       mobileNumber: "123456789",
-      rentDate: "2023-01-01",
+      status: "PENDING",
+      joinDate: "2023-01-01",
+      serviceType: "CLEANER",
     },
     {
       id: "3",
       tenantName: "Pranakrishna",
       address: "Boulevard Peach, Fes",
-      houseOwner: "Pranakrishna",
       email: "test1@g.com",
-      mobileNumber: "123456789",
-      rentDate: "2023-01-01",
+      mobileNumber: "234123",
+      status: "ACTIVE",
+      joinDate: "2023-01-01",
+      serviceType: "PLUMBER",
     },
     {
       id: "4",
       tenantName: "Jat Ski",
       address: "Rue Arizona, Tangier",
-      houseOwner: "Pranakrishna",
       email: "test1@g.com",
       mobileNumber: "123456789",
-      rentDate: "2023-01-01",
+      status: "PENDING",
+      joinDate: "2023-01-01",
+      serviceType: "ELECTRICITY",
     },
     {
       id: "5",
       tenantName: "Jat Ski",
       address: "Rue Arizona, Tangier",
-      houseOwner: "Pranakrishna",
       email: "test1@g.com",
       mobileNumber: "123456789",
-      rentDate: "2023-01-01",
+      status: "PENDING",
+      joinDate: "2023-01-01",
+      serviceType: "ELECTRICITY",
     },
     {
       id: "6",
       tenantName: "Jat Ski",
       address: "Rue Arizona, Tangier",
-      houseOwner: "Pranakrishna",
       email: "test1@g.com",
       mobileNumber: "123456789",
-      rentDate: "2023-01-01",
+      status: "PENDING",
+      joinDate: "2023-01-01",
+      serviceType: "ELECTRICITY",
     },
     {
       id: "7",
       tenantName: "Jat Ski",
       address: "Rue Arizona, Tangier",
-      houseOwner: "Pranakrishna",
       email: "test1@g.com",
       mobileNumber: "123456789",
-      rentDate: "2023-01-01",
+      status: "PENDING",
+      joinDate: "2023-01-01",
+      serviceType: "ELECTRICITY",
     },
     {
       id: "8",
       tenantName: "Jat Ski",
       address: "Rue Arizona, Tangier",
-      houseOwner: "Pranakrishna",
       email: "test1@g.com",
       mobileNumber: "123456789",
-      rentDate: "2023-01-01",
+      status: "ACTIVE",
+      joinDate: "2023-01-01",
+      serviceType: "ELECTRICITY",
     },
   ],
   totalBuildings: 200,
@@ -82,10 +90,10 @@ const initialState: TenantState = {
   totalUsers: 0,
 };
 
-const tenantSlice = createSlice({
-  name: "tenant",
+const serviceProvider = createSlice({
+  name: "serviceProvider",
   initialState,
   reducers: {},
 });
 
-export default tenantSlice.reducer;
+export default serviceProvider.reducer;

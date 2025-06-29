@@ -17,6 +17,7 @@ module.exports = {
         iconColor: "#101618",
         iconHoverColor: "#036AA2",
         tableBorder: "#1016181F",
+        dividerColor: "#1E1E240F",
         secondary: {
           500: "#10b981",
         },

@@ -61,3 +61,43 @@ export interface TenantState {
   totalServices: number;
   totalUsers: number;
 }
+
+export interface ServiceProvider {
+  id: string;
+  tenantName: string;
+  address: string;
+  email: string;
+  mobileNumber: string;
+  serviceType: string;
+  joinDate: string;
+  status: "ACTIVE" | "PENDING";
+}
+
+export interface ServiceProviderState {
+  serviceProviders: ServiceProvider[];
+  totalBuildings: number;
+  totalUnits: number;
+  totalServices: number;
+  totalUsers: number;
+}
+
+export interface ChatMessage {
+  id: string;
+  name: string;
+  message: string;
+  time: string;
+  avatar: string;
+}
+
+export interface ActiveChat {
+  id: string;
+  name: string;
+  message: string;
+  avatar: string;
+}
+
+export interface ChatState {
+  messages: ChatMessage[];
+  activeChat: ActiveChat | null;
+  selectedFilter: "All" | "Owner" | "Service Provider";
+}
