@@ -1,6 +1,6 @@
 "use client";
 
-import { DashboardHeader } from "@/components/pages/dashboard/DashboardHeader";
+import { DashboardHeader } from "@/components/pages/Dashboard/DashboardHeader";
 import { Sidebar } from "@/components/ui/Sidebar";
 import React from "react";
 
@@ -19,7 +19,7 @@ export default function DashboardLayout({
         <DashboardHeader />
 
         {/* Main Content */}
-        <div className="flex-1 overflow-auto">{children}</div>
+        <div className="flex-1 overflow-auto px-6">{children}</div>
       </div>
     </div>
   );

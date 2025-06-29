@@ -1,11 +1,11 @@
 "use client";
-import { TotalUser } from "@/components/pages/dashboard/TotalUser";
+import { TotalUser } from "@/components/pages/Dashboard/TotalUser";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { useSelector } from "react-redux";
-import { OverallSummary } from "../../../components/pages/dashboard/OverallSummary";
-import { PropertyTable } from "../../../components/pages/dashboard/PropertyTable";
-import { StatsCards } from "../../../components/pages/dashboard/StatsCards";
+import { OverallSummary } from "../../../components/pages/Dashboard/OverallSummary";
+import { PropertyTable } from "../../../components/pages/Dashboard/PropertyTable";
+import { StatsCards } from "../../../components/pages/Dashboard/StatsCards";
 import { RootState } from "../../../redux";
 
 export default function DashboardPage() {

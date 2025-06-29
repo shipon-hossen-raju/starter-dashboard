@@ -10,6 +10,8 @@ module.exports = {
         primary: "#036AA2",
         primaryForeground: "#1E1E24",
         bgGray: "#1016180F",
+        bgBody: "#F6F6F6",
+        bgButton: "#101618",
         textPrimary: "#1E1E1E",
         textSecondary: "#101618",
         iconColor: "#141B34",

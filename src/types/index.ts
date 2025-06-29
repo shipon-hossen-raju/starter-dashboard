@@ -25,3 +25,21 @@ export interface PropertyState {
   totalServices: number;
   totalUsers: number;
 }
+
+export interface PropertyOwner {
+  id: string;
+  ownerName: string;
+  address: string;
+  email: string;
+  mobileNumber: string;
+  totalBuildings: number;
+  totalUnits: number;
+}
+
+export interface PropertyOwnerState {
+  propertiesOwner: PropertyOwner[];
+  totalBuildings: number;
+  totalUnits: number;
+  totalServices: number;
+  totalUsers: number;
+}

@@ -224,10 +224,10 @@ export const downArrowIcon = (
     <path
       d="M10.0871 4.94531L7.03086 8.00156C6.66992 8.3625 6.0793 8.3625 5.71836 8.00156L2.66211 4.94531"
       stroke="currentColor"
-      stroke-width="0.75"
-      stroke-miterlimit="10"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="0.75"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -243,30 +243,30 @@ export const calenderThikIcon = (
     <path
       d="M16 2V6M8 2V6"
       stroke="#036AA2"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M13 4H11C7.22876 4 5.34315 4 4.17157 5.17157C3 6.34315 3 8.22876 3 12V14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22H13C16.7712 22 18.6569 22 19.8284 20.8284C21 19.6569 21 17.7712 21 14V12C21 8.22876 21 6.34315 19.8284 5.17157C18.6569 4 16.7712 4 13 4Z"
       stroke="#036AA2"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M3 10H21"
       stroke="#036AA2"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M9 16.5C9 16.5 10.5 17 11 18.5C11 18.5 13.1765 14.5 16 13.5"
       stroke="#036AA2"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -279,7 +279,7 @@ export const pencilIcon = (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-path="url(#clip0_102_1886)">
+    <g clipPath="url(#clip0_102_1886)">
       <path
         d="M0.488333 7.96603C0.175751 8.27852 9.43957e-05 8.70238 0 9.14437L0 9.99978H0.855417C1.29741 9.99969 1.72126 9.82403 2.03375 9.51145L7.59333 3.95187L6.04792 2.40645L0.488333 7.96603ZM9.64375 0.356033C9.54229 0.254464 9.4218 0.17389 9.28918 0.118915C9.15656 0.0639406 9.0144 0.0356445 8.87083 0.0356445C8.72727 0.0356445 8.58511 0.0639406 8.45249 0.118915C8.31987 0.17389 8.19938 0.254464 8.09792 0.356033L6.63708 1.81728L8.1825 3.3627L9.64375 1.90187C9.74532 1.8004 9.82589 1.67992 9.88087 1.54729C9.93584 1.41467 9.96414 1.27251 9.96414 1.12895C9.96414 0.985385 9.93584 0.843228 9.88087 0.710605C9.82589 0.577983 9.74532 0.457496 9.64375 0.356033Z"
         fill="currentColor"
@@ -290,5 +290,84 @@ export const pencilIcon = (
         <rect width="10" height="10" fill="currentColor" />
       </clipPath>
     </defs>
+  </svg>
+);
+
+export const magnifyingGlassIcon = (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M17 17L21 21"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19C15.4183 19 19 15.4183 19 11Z"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const rightArrowLineIcon = (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M14.4302 5.93018L20.5002 12.0002L14.4302 18.0702"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M3.5 12H20.33"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const leftArrowLineIcon = (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M9.57 5.93018L3.5 12.0002L9.57 18.0702"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M20.4999 12H3.66992"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
   </svg>
 );

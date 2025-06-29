@@ -9,7 +9,7 @@ import {
 } from "@/asserts/icons";
 import logo from "@/asserts/icons/logo";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { logout } from "../../redux/authSlice";
 
@@ -66,6 +66,14 @@ export const Sidebar: React.FC = () => {
 
     setMenuItems(newMenuItems);
   };
+
+  useEffect(() => {
+    const currentPath = window.location.pathname;
+    const activeItem = menuItems.find((item) => item.link === currentPath);
+    if (activeItem) {
+      handleChangeNav(activeItem.id);
+    }
+  }, [])
 
   const handleLogout = () => {
     dispatch(logout());
