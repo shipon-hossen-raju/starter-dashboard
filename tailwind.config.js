@@ -9,9 +9,18 @@ module.exports = {
       colors: {
         primary: "#036AA2",
         primaryForeground: "#1E1E24",
+        bgGray: "#1016180F",
+        textPrimary: "#1E1E1E",
+        textSecondary: "#101618",
+        iconColor: "#141B34",
+        iconHoverColor: "#036AA2",
+        tableBorder: "#1016181F",
         secondary: {
           500: "#10b981",
         },
+      },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
       },
     },
   },

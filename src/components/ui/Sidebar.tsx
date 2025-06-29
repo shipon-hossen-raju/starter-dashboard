@@ -8,39 +8,71 @@ import {
   tenantIcon,
 } from "@/asserts/icons";
 import logo from "@/asserts/icons/logo";
-import { LogOut, User } from "lucide-react";
+import { useRouter } from "next/navigation";
 import React from "react";
 import { useDispatch } from "react-redux";
 import { logout } from "../../redux/authSlice";
 
 const menuData = [
-  { id: 1, icon: dashboardIcon, label: "Dashboard", active: true },
-  { id: 2, icon: propertyOwnerIcon, label: "Property Owner" },
-  { id: 3, icon: tenantIcon, label: "Tenant" },
-  { id: 4, icon: serviceProviderIcon, label: "Service Provider" },
-  { id: 5, icon: chatSupportIcon, label: "Chat & Support" },
-  { id: 6, icon: profileTeamIcon, label: "Profile & Team" },
+  {
+    id: 1,
+    icon: dashboardIcon,
+    label: "Dashboard",
+    link: "/dashboard",
+    active: true,
+  },
+  {
+    id: 2,
+    icon: propertyOwnerIcon,
+    link: "/property-owner",
+    label: "Property Owner",
+  },
+  { id: 3, icon: tenantIcon, link: "/tenant", label: "Tenant" },
+  {
+    id: 4,
+    icon: serviceProviderIcon,
+    link: "/service-provider",
+    label: "Service Provider",
+  },
+  {
+    id: 5,
+    icon: chatSupportIcon,
+    link: "/chat-support",
+    label: "Chat & Support",
+  },
+  {
+    id: 6,
+    icon: profileTeamIcon,
+    link: "/profile-team",
+    label: "Profile & Team",
+  },
 ];
 
 export const Sidebar: React.FC = () => {
   const [menuItems, setMenuItems] = React.useState(menuData);
   const dispatch = useDispatch();
+  const router = useRouter();
 
   const handleChangeNav = (id: number) => {
-    const newMenuItems = menuItems.map((item) => ({
-      ...item,
-      active: item.id === id
-    }))
+    const newMenuItems = menuItems.map((item) => {
+      if (item.id === id) {
+        router.push(item.link);
+      }
+      return {
+        ...item,
+        active: item.id === id,
+      };
+    });
 
     setMenuItems(newMenuItems);
-  }
+  };
 
   const handleLogout = () => {
     dispatch(logout());
   };
 
   return (
-    <div className="w-64 min-h-screen bg-white border-r border-gray-200 h-full flex flex-col p-6">
+    <div className="w-64 min-h-screen bg-white h-full flex flex-col py-6 px-4">
       <div className="">
         <div className="flex flex-col items-center space-x-2 mb-8 pt-4">
           <figure className="text-primary">{logo}</figure>

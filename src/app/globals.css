@@ -3,6 +3,36 @@
 @tailwind utilities;
 
 body {
-  background: #F6F6F6;
+  background: #f6f6f6;
   font-family: Arial, Helvetica, sans-serif;
-} 
+}
+
+h2 {
+  @apply text-2xl font-medium text-textPrimary;
+}
+
+/* shortcut */
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+/* table default style */
+table {
+  @apply w-full;
+}
+
+table thead tr {
+  @apply border-b border-tableBorder/10;
+}
+
+table thead tr th {
+  @apply text-left py-3 px-4 text-sm font-medium text-textSecondary/60;
+}
+
+table tbody tr {
+  @apply divide-y divide-tableBorder/10 border-b last:border-b-0 hover:bg-gray-50;
+}
+
+table tbody tr td {
+  @apply py-3 px-4 text-sm font-normal text-textSecondary;
+}

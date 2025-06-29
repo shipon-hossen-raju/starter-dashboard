@@ -7,8 +7,8 @@ import { Input } from "../ui/Input";
 import { loginStart, loginSuccess } from "../../redux/authSlice";
 
 export const LoginForm: React.FC = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("test@g.com");
+  const [password, setPassword] = useState("1234");
   const dispatch = useDispatch();
   const router = useRouter();
 
