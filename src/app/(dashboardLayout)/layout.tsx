@@ -21,7 +21,9 @@ export default function DashboardLayout({
         <DashboardHeader />
 
         {/* Main Content */}
-        <div className="flex-1 overflow-auto px-2 md:px-4 lg:px-6">{children}</div>
+        <div className="flex-1 overflow-auto px-2 md:px-4 lg:px-6">
+          {children}
+        </div>
       </div>
     </div>
   );
