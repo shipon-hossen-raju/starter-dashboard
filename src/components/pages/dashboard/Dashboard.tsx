@@ -1,18 +1,15 @@
 "use client";
 import { TotalUser } from "@/components/pages/Dashboard/TotalUser";
-import LoadingDashboard from "@/components/ui/loading/LoadingDashboard";
-import { useSelector } from "react-redux";
 import { OverallSummary } from "../../../components/pages/Dashboard/OverallSummary";
 import { PropertyTable } from "../../../components/pages/Dashboard/PropertyTable";
 import { StatsCards } from "../../../components/pages/Dashboard/StatsCards";
-import { RootState } from "../../../redux";
 
 export default function Dashboard() {
-  const { loading } = useSelector((state: RootState) => state.auth);
+  // const { loading } = useSelector((state: RootState) => state.auth);
 
-  if (loading) {
-    return <LoadingDashboard />;
-  }
+  // if (loading) {
+  //   return <LoadingDashboard />;
+  // }
 
   return (
     <div className="">
