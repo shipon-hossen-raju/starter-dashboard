@@ -94,7 +94,7 @@ export const Sidebar: React.FC = () => {
     if (activeItem) {
       handleChangeNav(activeItem.id);
     }
-  }, [handleChangeNav, menuItems]);
+  }, []);
 
   const handleLogout = () => {
     dispatch(logout());
