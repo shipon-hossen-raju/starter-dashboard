@@ -40,7 +40,7 @@ export const ChatWindow: React.FC = () => {
 
   return (
     <Card>
-      <div className="flex-1 flex flex-col min-h-[calc(100vh-10rem)] max-h-[calc(100vh-10rem)] min-w-[24rem] overflow-y-auto scroll-smooth">
+      <div className="flex-1 flex flex-col min-h-[calc(100vh-10rem)] max-h-[calc(100vh-10rem)] min-w-[18rem] overflow-y-auto scroll-smooth">
         {/* Chat Header */}
         <div className="bg-white pb-5 ">
           <div className="flex items-center">
@@ -100,7 +100,7 @@ export const ChatWindow: React.FC = () => {
               <div className="flex-1 max-w-md">
                 <div className="bg-primary rounded-lg p-3 shadow-sm">
                   <p className="text-sm text-white">
-                    Of course! I'd be happy to help. What specific issue are you
+                    Of course! I&lsquo;d be happy to help. What specific issue are you
                     facing?
                   </p>
                   <span className="text-xs text-white/60 mt-1.5">10:32am</span>
@@ -138,7 +138,7 @@ export const ChatWindow: React.FC = () => {
               <div className="flex-1 max-w-md">
                 <div className="bg-primary rounded-lg p-3 shadow-sm">
                   <p className="text-sm text-white">
-                    Of course! I'd be happy to help. What specific issue are you
+                    Of course! I &lsquo;d be happy to help. What specific issue are you
                     facing?
                   </p>
                   <span className="text-xs text-white/60 mt-1.5">10:32am</span>
@@ -176,7 +176,7 @@ export const ChatWindow: React.FC = () => {
               <div className="flex-1 max-w-md">
                 <div className="bg-primary rounded-lg p-3 shadow-sm">
                   <p className="text-sm text-white">
-                    Of course! I'd be happy to help. What specific issue are you
+                    Of course! I &lsquo;d be happy to help. What specific issue are you
                     facing?
                   </p>
                   <span className="text-xs text-white/60 mt-1.5">10:32am</span>
@@ -214,7 +214,7 @@ export const ChatWindow: React.FC = () => {
               <div className="flex-1 max-w-md">
                 <div className="bg-primary rounded-lg p-3 shadow-sm">
                   <p className="text-sm text-white">
-                    Of course! I'd be happy to help. What specific issue are you
+                    Of course! I &lsquo;d be happy to help. What specific issue are you
                     facing?
                   </p>
                   <span className="text-xs text-white/60 mt-1.5">10:32am</span>
@@ -252,7 +252,7 @@ export const ChatWindow: React.FC = () => {
               <div className="flex-1 max-w-md">
                 <div className="bg-primary rounded-lg p-3 shadow-sm">
                   <p className="text-sm text-white">
-                    Of course! I'd be happy to help. What specific issue are you
+                    Of course! I &lsquo;d be happy to help. What specific issue are you
                     facing?
                   </p>
                   <span className="text-xs text-white/60 mt-1.5">10:32am</span>
@@ -290,7 +290,7 @@ export const ChatWindow: React.FC = () => {
               <div className="flex-1 max-w-md">
                 <div className="bg-primary rounded-lg p-3 shadow-sm">
                   <p className="text-sm text-white">
-                    Of course! I'd be happy to help. What specific issue are you
+                    Of course! I &lsquo;d be happy to help. What specific issue are you
                     facing?
                   </p>
                   <span className="text-xs text-white/60 mt-1.5">10:32am</span>

@@ -2,13 +2,13 @@
 
 import { pencilIcon } from "@/asserts/icons";
 import { Card } from "@/components/ui/Card";
-import Pagination from "@/components/ui/Pagination";
+import SwitchToggle from "@/components/ui/SwitchToggle";
 import { RootState } from "@/redux";
 import { Metadata } from "next";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import InputSearch from "../../ui/InputSearch";
-import SwitchToggle from "@/components/ui/SwitchToggle";
+import Pagination from "@/components/ui/Pagination";
 
 export const metaData: Metadata = {
   title: "Property Owner",
@@ -16,7 +16,9 @@ export const metaData: Metadata = {
 };
 
 const ServiceProvider: React.FC = () => {
-  const { serviceProviders } = useSelector((state: RootState) => state.serviceProvider);
+  const { serviceProviders } = useSelector(
+    (state: RootState) => state.serviceProvider
+  );
   const [active, setActive] = useState("ACTIVE");
 
   const filteredServiceProvider = serviceProviders.filter(
@@ -26,9 +28,9 @@ const ServiceProvider: React.FC = () => {
   return (
     <div>
       <Card>
-        <div>
-          <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center space-x-6">
+        <div className="">
+          <div className="flex gap-4 justify-between mb-8">
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:space-x-6">
               <h2>Service Provider List</h2>
               <SwitchToggle active={active} setActive={setActive} />
             </div>
@@ -39,8 +41,8 @@ const ServiceProvider: React.FC = () => {
             </div>
           </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full">
+          <div className="w-full overflow-x-auto">
+            <table className="min-w-[1000px] w-full">
               <thead>
                 <tr>
                   <th>Tenant Name</th>
@@ -59,9 +61,7 @@ const ServiceProvider: React.FC = () => {
                     <td>{service.address}</td>
                     <td className="text-center">{service.email}</td>
                     <td className="text-center">{service.mobileNumber}</td>
-                    <td className="text-center">
-                      {service.serviceType}
-                    </td>
+                    <td className="text-center">{service.serviceType}</td>
                     <td className="text-center">{service.joinDate}</td>
                     <td className="text-center flex-center">
                       <button className="edit-button">{pencilIcon}</button>

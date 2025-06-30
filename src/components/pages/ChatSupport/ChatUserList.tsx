@@ -2,6 +2,7 @@
 
 import { RootState } from "@/redux";
 import { setActiveChat, setSelectedFilter } from "@/redux/slice/chatSlice";
+import { ChatMessage } from "@/types";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -18,7 +19,7 @@ export default function ChatUserList() {
   };
   
 
-  const handleChatSelect = (message: any) => {
+  const handleChatSelect = (message: ChatMessage) => {
     dispatch(
       setActiveChat({
         id: message.id,

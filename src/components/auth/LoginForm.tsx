@@ -1,16 +1,23 @@
 "use client";
+import { RootState } from "@/redux";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { loginStart, loginSuccess } from "../../redux/slice/authSlice";
 import { Button } from "../ui/Button";
 import { Input } from "../ui/Input";
+import LoadingSpinner from "../ui/loading/LoadingSpinner";
 
 export const LoginForm: React.FC = () => {
   const [email, setEmail] = useState("test@g.com");
   const [password, setPassword] = useState("1234");
   const dispatch = useDispatch();
   const router = useRouter();
+  const { loading } = useSelector((state: RootState) => state.auth);
+
+  if (loading) {
+    return <LoadingSpinner />;
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,7 +33,7 @@ export const LoginForm: React.FC = () => {
         })
       );
       router.push("/dashboard");
-    }, 1000);
+    }, 500);
   };
 
   return (

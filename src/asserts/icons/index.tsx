@@ -246,6 +246,25 @@ export const downArrowIcon = (
   </svg>
 );
 
+export const leftArrowIcon = (
+  <svg
+    width="8"
+    height="12"
+    viewBox="0 0 8 12"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M6.5 1C6.5 1 1.50001 4.68242 1.5 6C1.49999 7.31767 6.5 11 6.5 11"
+      stroke="black"
+      strokeWidth="1.25"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+
 export const calenderThikIcon = (
   <svg
     width="24"
@@ -470,6 +489,36 @@ export const eyeSingleIcon = (
     <path
       d="M8.0001 6.09375C6.95343 6.09375 6.1001 6.94708 6.1001 8.00042C6.1001 9.04708 6.95343 9.90042 8.0001 9.90042C9.04676 9.90042 9.90676 9.04708 9.90676 8.00042C9.90676 6.95375 9.04676 6.09375 8.0001 6.09375Z"
       fill="currentColor"
+    />
+  </svg>
+);
+
+export const closeIcon = (
+  <svg
+    stroke="currentColor"
+    fill="none"
+    strokeWidth={0}
+    viewBox="0 0 15 15"
+    height="1em"
+    width="1em"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M11.7816 4.03157C12.0062 3.80702 12.0062 3.44295 11.7816 3.2184C11.5571 2.99385 11.193 2.99385 10.9685 3.2184L7.50005 6.68682L4.03164 3.2184C3.80708 2.99385 3.44301 2.99385 3.21846 3.2184C2.99391 3.44295 2.99391 3.80702 3.21846 4.03157L6.68688 7.49999L3.21846 10.9684C2.99391 11.193 2.99391 11.557 3.21846 11.7816C3.44301 12.0061 3.80708 12.0061 4.03164 11.7816L7.50005 8.31316L10.9685 11.7816C11.193 12.0061 11.5571 12.0061 11.7816 11.7816C12.0062 11.557 12.0062 11.193 11.7816 10.9684L8.31322 7.49999L11.7816 4.03157Z"
+      fill="currentColor"
+    />
+  </svg>
+);
+
+export const hamburgerIcon = (
+  <svg width="24" height="24" fill="none" stroke="currentColor">
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      d="M4 6h16M4 12h16M4 18h16"
     />
   </svg>
 );
