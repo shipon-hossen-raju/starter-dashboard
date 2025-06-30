@@ -12,10 +12,12 @@ export default function DashboardLayout({
   return (
     <div className="min-h-screen flex">
       {/* Sidebar */}
-      <Sidebar />
+      <div className="h-screen sticky top-0 flex-shrink-0">
+        <Sidebar />
+      </div>
 
       {/* Right Content */}
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col min-h-screen">
         <DashboardHeader />
 
         {/* Main Content */}

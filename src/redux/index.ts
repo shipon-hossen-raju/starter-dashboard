@@ -5,6 +5,7 @@ import propertyReducer from "./slice/propertySlice";
 import serviceProvider from "./slice/serviceProvider";
 import tenant from "./slice/tenantSlice";
 import chat from "./slice/chatSlice";
+import contactList from "./slice/contactListSlice";
 
 export const store = configureStore({
   reducer: {
@@ -14,6 +15,7 @@ export const store = configureStore({
     tenant: tenant,
     serviceProvider: serviceProvider,
     chat: chat,
+    contactList: contactList,
   },
 });
 

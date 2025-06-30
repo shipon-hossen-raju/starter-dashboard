@@ -408,3 +408,68 @@ export const messageSendIcon = (
     />
   </svg>
 );
+
+export const deleteIcon = (
+  <svg
+    width="14"
+    height="14"
+    viewBox="0 0 14 14"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M12.25 3.48796C10.3075 3.29546 8.35333 3.19629 6.405 3.19629C5.25 3.19629 4.095 3.25462 2.94 3.37129L1.75 3.48796"
+      stroke="currentColor"
+      strokeWidth="1.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M4.9585 2.89949L5.08683 2.13533C5.18016 1.58116 5.25016 1.16699 6.236 1.16699H7.76433C8.75016 1.16699 8.826 1.60449 8.9135 2.14116L9.04183 2.89949"
+      stroke="currentColor"
+      strokeWidth="1.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M10.9961 5.33203L10.6169 11.2062C10.5527 12.122 10.5002 12.8337 8.87273 12.8337H5.12773C3.50023 12.8337 3.44773 12.122 3.38356 11.2062L3.00439 5.33203"
+      stroke="currentColor"
+      strokeWidth="1.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M6.02588 9.625H7.96838"
+      stroke="currentColor"
+      strokeWidth="1.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M5.5415 7.29199H8.45817"
+      stroke="currentColor"
+      strokeWidth="1.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const eyeSingleIcon = (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M14.1668 6.10044C12.6268 3.68044 10.3735 2.28711 8.00016 2.28711C6.8135 2.28711 5.66016 2.63378 4.60683 3.28044C3.5535 3.93378 2.60683 4.88711 1.8335 6.10044C1.16683 7.14711 1.16683 8.84711 1.8335 9.89378C3.3735 12.3204 5.62683 13.7071 8.00016 13.7071C9.18683 13.7071 10.3402 13.3604 11.3935 12.7138C12.4468 12.0604 13.3935 11.1071 14.1668 9.89378C14.8335 8.85378 14.8335 7.14711 14.1668 6.10044ZM8.00016 10.6938C6.50683 10.6938 5.30683 9.48711 5.30683 8.00044C5.30683 6.51378 6.50683 5.30711 8.00016 5.30711C9.4935 5.30711 10.6935 6.51378 10.6935 8.00044C10.6935 9.48711 9.4935 10.6938 8.00016 10.6938Z"
+      fill="currentColor"
+    />
+    <path
+      d="M8.0001 6.09375C6.95343 6.09375 6.1001 6.94708 6.1001 8.00042C6.1001 9.04708 6.95343 9.90042 8.0001 9.90042C9.04676 9.90042 9.90676 9.04708 9.90676 8.00042C9.90676 6.95375 9.04676 6.09375 8.0001 6.09375Z"
+      fill="currentColor"
+    />
+  </svg>
+);

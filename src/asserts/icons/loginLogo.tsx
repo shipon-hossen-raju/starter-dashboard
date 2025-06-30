@@ -1,7 +1,7 @@
 export const loginLogo = (
   <svg
-    width="221"
-    height="149"
+    // width="221"
+    // height="149"
     viewBox="0 0 221 149"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

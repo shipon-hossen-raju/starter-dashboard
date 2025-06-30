@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         primary: "#036AA2",
         primaryForeground: "#1E1E24",
+        bgPrimary: "#1E1E1E",
         bgGray: "#1016180F",
         bgBody: "#F6F6F6",
         bgButton: "#101618",

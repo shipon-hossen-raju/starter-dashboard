@@ -1,3 +1,9 @@
-export default function ProfileTeam() {
-  return <div>profile team</div>;
+import ProfileTeam from "@/components/pages/ProfileTeam/ProfileTeam";
+
+export default function ProfileTeamPage() {
+  return (
+    <>
+      <ProfileTeam />
+    </>
+  );
 }

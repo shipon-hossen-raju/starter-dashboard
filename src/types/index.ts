@@ -62,6 +62,22 @@ export interface TenantState {
   totalUsers: number;
 }
 
+export interface ContactList {
+  id: string;
+  name: string;
+  email: string;
+  role: string;
+  accessPermission: string;
+}
+
+export interface ContactListState {
+  contactList: ContactList[];
+  totalBuildings: number;
+  totalUnits: number;
+  totalServices: number;
+  totalUsers: number;
+}
+
 export interface ServiceProvider {
   id: string;
   tenantName: string;
@@ -101,3 +117,4 @@ export interface ChatState {
   activeChat: ActiveChat | null;
   selectedFilter: "All" | "Owner" | "Service Provider";
 }
+

@@ -8,11 +8,11 @@ import {
   tenantIcon,
 } from "@/asserts/icons";
 import logo from "@/asserts/icons/logo";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { logout } from "../../redux/slice/authSlice";
-import Link from "next/link";
 
 const menuData = [
   {
@@ -81,11 +81,11 @@ export const Sidebar: React.FC = () => {
   };
 
   return (
-    <div className="w-64 min-h-screen bg-white h-full flex flex-col py-6 px-4">
+    <div className="w-20 md:w-64 min-h-screen bg-white h-full flex flex-col py-6 px-4">
       <div className="">
         <div className="flex flex-col items-center space-x-2 mb-8 pt-4">
           <figure className="text-primary">{logo}</figure>
-          <span className="text-lg font-semibold text-gray-900">
+          <span className="text-lg transition-all md:block hidden font-semibold text-gray-900">
             Home Management
           </span>
         </div>
@@ -102,7 +102,9 @@ export const Sidebar: React.FC = () => {
                 }`}
               >
                 <figure className="w-5 h-5">{item.icon}</figure>
-                <span className="text-sm font-medium">{item.label}</span>
+                <span className="text-sm font-medium transition-all md:block hidden">
+                  {item.label}
+                </span>
               </button>
             </Link>
           ))}
@@ -116,7 +118,9 @@ export const Sidebar: React.FC = () => {
           className="w-full flex items-center space-x-3 px-4 py-4 rounded-lg text-left transition-colors text-gray-700 hover:bg-gray-100"
         >
           {logoutIcon}
-          <span className="text-sm font-medium">Log Out</span>
+          <span className="text-sm font-medium transition-all md:block hidden">
+            Log Out
+          </span>
         </button>
       </div>
     </div>
